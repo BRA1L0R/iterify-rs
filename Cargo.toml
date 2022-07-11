@@ -1,7 +1,8 @@
 [package]
 name = "iterify"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
+repository = "https://github.com/BRA1L0R/iterify-rs"
 description = "Turn any type into an iterator with closures!"
 license-file = "LICENSE.md"
 readme = "README.md"
