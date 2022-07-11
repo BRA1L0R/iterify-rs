@@ -1,6 +1,10 @@
+#![doc = include_str!("../README.md")]
+
 use std::marker::PhantomData;
 
 pub trait Iterify: Sized {
+    /// Takes any type `T` and through a closure `op` (which takes a mutable reference to `T`
+    /// as its only parameter) yields an item `Option<I>`
     fn iterify<I, F: FnMut(&mut Self) -> Option<I>>(&mut self, op: F) -> Iterated<Self, I, F> {
         Iterated(self, op, PhantomData)
     }
